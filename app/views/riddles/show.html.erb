@@ -42,14 +42,16 @@
   <br>
   <br>
   <br>
-  <br>
   <h3>Hover your courser over the box below to reveal the answer.</h3>
-  <br>
-  <br>
   <br>
   <div class="answer">
     <%= @riddle.answer %>
   </div>
+  <br>
+  <div class="new_riddle_btn">
+    <%= button_to "Click here to genreate a new riddle.", riddle_path, method: :get %>
+  </div>
+  <br>
   <div class="go_home_btn">
     <%= button_to "Go Home", root_path, method: :get %>
   </div>
