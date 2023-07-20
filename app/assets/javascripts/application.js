@@ -13,3 +13,17 @@
 //= require rails-ujs
 //= require activestorage
 //= require_tree .
+function createConfetti() {
+  const confettiColors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
+  const confettiCount = 100;
+  const container = document.querySelector('.confetti-container');
+
+  for (let i = 0; i < confettiCount; i++) {
+    const confetti = document.createElement('div');
+    confetti.className = 'confetti';
+    confetti.style.backgroundColor = confettiColors[Math.floor(Math.random() * confettiColors.length)];
+    confetti.style.left = `${Math.random() * 100}%`;
+    confetti.style.animationDelay = `${Math.random() * 2}s`;
+    container.appendChild(confetti);
+  }
+}
