@@ -1,5 +1,19 @@
-<body>
+<style>
+  .body {
+    text-align: center;
+  }
+</style>
+
+<body class="body">
+<br>
+<br>
+<br>
+<br>
+<br>
   <h1>Welcome, prepare to seal your fate. Choose your challenge.</h1>
+  <br>
+  <br>
+  <br>
   <section class="btn_section">
     <div class="riddle_btn">
       <%= button_to "Solve a Riddle!", riddle_path, method: :get %>
@@ -9,6 +23,8 @@
         </h3>
       </div>
     </div>
+    <br>
+    <br>
     <div class="game_btn">
       <%= button_to "Play a Game", game_path, method: :get %>
       <div class="desc_of_game">
