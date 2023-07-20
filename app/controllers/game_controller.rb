@@ -19,4 +19,8 @@ class GameController < ApplicationController
       end
     end
   end
+
+  def over
+    
+  end
 end
