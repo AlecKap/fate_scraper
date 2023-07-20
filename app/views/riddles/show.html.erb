@@ -1,3 +1,56 @@
-<%= @riddle.title %>
-<%= @riddle.question %>
-<%= @riddle.answer %>
+<style>
+  .body {
+    text-align: center;
+    font-size: 12px;
+  }
+  .title {
+    text-align: center;
+    font-size: 25px;
+  }
+
+  .question {
+    text-align: center;
+    font-size: 15px;
+  }
+
+  .answer {
+    color: transparent;
+    text-align: center;
+    font-size: 30px;
+    border: 10px solid black;
+    right-margin: 100px;
+    left-margin: 100px;
+  }
+
+  .answer:hover {
+    color: black;
+  }
+</style>
+
+<body class="body">
+<br>
+<br>
+<br>
+  <div class="title">
+    <h1><%= @riddle.title %>:</h1>
+  </div>
+  <br>
+  <br>
+  <div class="question">
+    <h2><%= @riddle.question %></h2>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h3>Hover your courser over the box below to reveal the answer.</h3>
+  <br>
+  <br>
+  <br>
+  <div class="answer">
+    <%= @riddle.answer %>
+  </div>
+  <div class="go_home_btn">
+    <%= button_to "Go Home", root_path, method: :get %>
+  </div>
+</body>
