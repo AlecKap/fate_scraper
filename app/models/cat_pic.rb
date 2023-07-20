@@ -1,0 +1,2 @@
+class CatPic < ApplicationRecord
+end
