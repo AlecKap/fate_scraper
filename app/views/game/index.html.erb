@@ -1,18 +1,33 @@
 <style>
-.button-container {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: auto; /* Adjust the maximum width as needed */
-  margin: 0 auto; /* To center the buttons */
-}
+  .button-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: auto; /* Adjust the maximum width as needed */
+    margin: 0 auto; /* To center the buttons */
+  }
+  .game-info {
+    text-align: center;
+  }
 
-form {
-  margin: 5px; /* Adjust the margin to add spacing between buttons */
-}
+  .guess-info {
+    text-align: center;
+  }
+
+  form {
+    margin: 5px; /* Adjust the margin to add spacing between buttons */
+  }
+
+  .go_home_btn {
+    text-align: center;
+  }
 </style>
 
-<h1>Find the correct button, that is all</h1>
-<h2>You have made <%= @click_counter %> guesses</h2>
+<div class="go_home_btn">
+  <%= button_to "Go Home", root_path, method: :get %>
+</div>
+
+<h1 class="game-info">Find the correct button, that is all.</h1>
+<h2 class="guess-info">You have made <%= @click_counter %> guesses</h2>
 
 <div class="button-container">
   <% @game_array.each do |btn| %>
