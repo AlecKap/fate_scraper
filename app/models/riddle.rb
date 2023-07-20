@@ -1,0 +1,2 @@
+class Riddle < ApplicationRecord
+end
